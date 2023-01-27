@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: inherit;
+}
+
+html {
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 16px;
+}
+
+body {
+   background-color: rgb(182, 93, 167);
+}
+
+.container {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+}
+
+.card__container {
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.images__container {
+   position: relative;
+   width: 100%;
+   min-height: 260px;
+   box-shadow: 0 0 15px rgb(120, 79, 113);
+   border-radius: 3px;
+}
+
+.images__container[data-bgcolor="black"] {
+   background-image: radial-gradient(rgb(217, 176, 52), rgb(49, 47, 52));
+}
+
+.images__container[data-bgcolor="blue"] {
+   background-image: radial-gradient(rgb(93, 117, 131), rgb(50, 56, 76));
+}
+
+.images__container[data-bgcolor="brown"] {
+   background-image: radial-gradient(rgb(164, 86, 87), rgb(79, 54, 48));
+}
+
+.images__container[data-bgcolor="grey"] {
+   background-image: radial-gradient(rgb(195, 200, 187) 20%, rgb(51, 62, 91));
+}
+
+.images__container[data-bgcolor="orange"] {
+   background-image: radial-gradient(rgb(210, 210, 210), rgb(185, 80, 47));
+}
+
+.share {
+   position: absolute;
+   right: 1rem;
+   top: 1rem;
+   background-image: url(./assets/svgs/share.svg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-position: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.share:hover {
+   transform: scale(1.075);
+}
+
+.nike {
+   position: absolute;
+   left: 1rem;
+   top: 1rem;
+   background-image: url(./assets/svgs/nike-logo.svg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-position: center;
+   width: 120px;
+   height: 60px;
+}
+
+.nike__text {
+   position: absolute;
+   left: 10%;
+   top: 20%;
+   background-image: url(./assets/svgs/nike.svg);
+   background-repeat: no-repeat;
+   background-size: 50%;
+   background-position: left;
+   width: 80%;
+   height: 40%;
+}
+
+.shoe {
+   position: absolute;
+   left: 50%;
+   bottom: 20%;
+   height: 70%;
+   width: 90%;
+   object-fit: contain;
+   transform-origin: left center, center, center;
+   /* display: none; */
+   transform: scale(0) rotate(-7deg) translateX(-50%);
+   transition: 0.5s transform ease-out;
+   z-index: -1;
+}
+
+.images__container[data-bgcolor="black"] .shoe.black {
+   transform: scale(1) rotate(-7deg) translateX(-50%);
+   z-index: 1;
+}
+
+.images__container[data-bgcolor="blue"] .shoe.blue {
+   transform: scale(1) rotate(-7deg) translateX(-50%);
+   z-index: 1;
+}
+
+.images__container[data-bgcolor="brown"] .shoe.brown {
+   transform: scale(1) rotate(-7deg) translateX(-50%);
+   z-index: 1;
+}
+
+.images__container[data-bgcolor="grey"] .shoe.grey {
+   transform: scale(1) rotate(-7deg) translateX(-50%);
+   z-index: 1;
+}
+
+.images__container[data-bgcolor="orange"] .shoe.orange {
+   transform: scale(1) rotate(-7deg) translateX(-50%);
+   z-index: 1;
+}
+
+.details__container {
+   background-color: #c9c9c9;
+   width: 100%;
+   min-height: 40vw;
+   /* min-height: 340px; */
+   box-shadow: 0 0 15px rgb(120, 79, 113);
+   padding: 2rem;
+   color: #222;
+   border-radius: 3px;
+}
+
+.capitalize {
+   text-transform: capitalize;
+   margin-top: 0.75rem;
+}
+
+h2 {
+   font-size: 1.8rem;
+}
+
+h3 {
+   font-size: 1.4rem;
+}
+
+.title {
+   margin-top: 0;
+}
+.title span {
+   font-size: 1rem;
+   background-color: var(--clr-theme, rgb(45, 45, 45));
+   padding: 0.3rem 0.5rem;
+   border-radius: 5px;
+   color: #fffff0;
+}
+
+.title + .desc {
+   margin-top: 0;
+   font-size: 1.2rem;
+}
+
+.color {
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   margin: 0.5rem 0 0 0.5rem;
+   cursor: pointer;
+}
+
+.color:hover {
+   transform: scale(1.075);
+}
+
+.color.active {
+   border: 4px solid #ececcb;
+}
+
+.colors__choice [data-color="black"] {
+   background-color: rgb(45, 45, 45);
+}
+
+.colors__choice [data-color="blue"] {
+   background-color: rgb(69, 69, 129);
+}
+
+.colors__choice [data-color="brown"] {
+   background-color: rgb(123, 73, 40);
+}
+
+.colors__choice [data-color="grey"] {
+   background-color: rgb(120, 120, 120);
+}
+
+.colors__choice [data-color="orange"] {
+   background-color: rgb(185, 80, 47);
+}
+
+.size {
+   display: inline-block;
+   font-weight: bold;
+   width: 40px;
+   text-align: center;
+   padding-block: 0.6rem;
+   border-radius: 5px;
+   background-color: #fffff0;
+   margin: 0.5rem 0 0 0.5rem;
+   cursor: pointer;
+}
+
+.size:hover {
+   transform: scale(1.075);
+}
+
+.size.active {
+   background-color: var(--clr-theme, rgb(45, 45, 45));
+   color: #fffff0;
+}
+
+.submit {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   margin-top: 2rem;
+}
+
+.submit__btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   margin-right: 2rem;
+
+   border-radius: 5px;
+   background-color: var(--clr-theme, rgb(45, 45, 45));
+   cursor: pointer;
+   border: none;
+   color: #fffff0;
+   font-size: 1.05rem;
+   font-weight: bold;
+}
+
+.submit__btn:hover {
+   transform: scale(1.075);
+}
+
+.submit__btn span {
+   content: url(./assets/svgs/shopping-cart.svg);
+   margin-right: 0.5rem;
+}
+
+.price {
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+
+@media (min-width: 950px) {
+   .card__container {
+      flex-direction: row;
+      width: 100%;
+      max-width: 1100px;
+   }
+
+   .images__container {
+      min-height: 0;
+      height: 420px;
+   }
+
+   .details__container {
+      min-height: 0;
+      height: 440;
+   }
+
+   .shoe {
+      bottom: 15%;
+   }
+}
